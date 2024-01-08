@@ -1,15 +1,17 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import FullStack from './components/FullStack'
-import { useState } from 'react'
+import { useState} from 'react'
 import Datascience from './components/Datascience'
 import CyberSecurity from './components/CyberSecurity'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import Career from './components/Career'
 import { Link } from 'react-router-dom'
 import All from './components/All'
 
+
 function App() {
+  
   let [fullstack, setFullstack] = useState([
     {
       image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/X_Reasons_to_learn_Javascript.jpg",
@@ -109,7 +111,7 @@ function App() {
         cyberSecurity.map((e, i) => {return <CyberSecurity cyberSecurity={e} key={i} />})}/>
         <Route path='/career' element={
         career.map((e, i) => {return <Career career={e} key={i} />})}/>
-        <Route path='*' element={<All/>}/>
+        <Route path='*' element={<Navigate to='/all'/>}/>
       </Routes>
       
     </BrowserRouter>

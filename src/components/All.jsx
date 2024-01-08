@@ -21,7 +21,6 @@ function All({fullstack  , career ,  dataScience , cyberSecurity}) {
    {
     career.map((e,i) => {return <Career career={e} key={i} />})
   }
-  <h1>This Is All Page</h1>
   </>
   
 }
