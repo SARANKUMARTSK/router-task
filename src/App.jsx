@@ -100,7 +100,7 @@ function App() {
     <BrowserRouter>
     <Navbar />
       <Routes>
-      <Route path='/all' element={<All/>}/>
+      <Route path='/all' element={<All fullstack={fullstack} dataScience={dataScience} cyberSecurity={cyberSecurity} career={career}/>}/>
         <Route path='/fullstack' element={
           fullstack.map((e, i) => {return <FullStack fullstack={e} key={i} />})}/>
         <Route path='datascience' element={
